@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onOptionsItemSelected(item);
 
-        if(item.getItemId() == R.id.add_note)
+        if(item.getItemId() == R.id.addNote)
         {
             Intent intent = new Intent(getApplicationContext(), NoteEditorActivity.class);
             startActivity(intent);
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listView = (ListView)findViewById(R.id.listView);
+        ListView listView = (ListView)findViewById(R.id.notesList);
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.madt_lab4", Context.MODE_PRIVATE);
         HashSet<String> set = (HashSet<String>)sharedPreferences.getStringSet("notes", null);
 
