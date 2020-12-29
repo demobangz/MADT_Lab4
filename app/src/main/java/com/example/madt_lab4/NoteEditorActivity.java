@@ -21,7 +21,7 @@ public class NoteEditorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_editor);
 
-        EditText editText = (EditText)findViewById(R.id.editText);
+        EditText editText = (EditText)findViewById(R.id.editNote);
         Intent intent = getIntent();
         noteID = intent.getIntExtra("noteID", -1);
 
